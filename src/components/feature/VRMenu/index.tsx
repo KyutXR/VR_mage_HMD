@@ -23,7 +23,7 @@ function VRButton({ position, label, onClick, width = 0.396, color = '#333', hov
   const shadowTextRef = useRef<any>(null!);
   const targetColor = useRef(new THREE.Color());
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     const speed = 12;
 
     // // Animate button moving forward
@@ -80,7 +80,6 @@ function VRButton({ position, label, onClick, width = 0.396, color = '#333', hov
             outlineOpacity={0.15}
             anchorX="center" 
             anchorY="middle" 
-            depthWrite={false}
           >
             {label}
           </Text>
